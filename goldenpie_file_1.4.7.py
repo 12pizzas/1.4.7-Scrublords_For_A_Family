@@ -9,10 +9,10 @@ import numpy as np
 
 #def kkk():
 #    print('no')
-def alpha_down(pic2):
+def alpha_down():
     directory = os.path.dirname(os.path.abspath(__file__)) 
     # Build an absolute filename from directory + filename
-    filename = os.path.join(directory, pic2)
+    filename = os.path.join(directory, 'cow.jpg')
     # Read the image data into an array
     img = plt.imread(filename)
     
@@ -28,5 +28,4 @@ def alpha_down(pic2):
     width = len(img[0])
     for r in range(155):
         for c in range(width):
-            if sum(img[r][c])>500: # brightness R+G+B goes up to 3*255=765
-                img[r][c]=[255,0,255] # R + B = magenta
+            img[r][c]=[0,0,0,100]
