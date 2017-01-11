@@ -5,34 +5,20 @@ import matplotlib.pyplot as plt
 import os.path
 import numpy as np
 
-#Open the files in the same directory as the Python script
-directory = os.path.dirname(os.path.abspath(__file__))
-cow_file = os.path.join(directory, 'cow.jpg')
 
-#Show the new image in a new window
-cow_img = PIL.Image.open(cow_file)
-fig, axes = plt.subplots(1, 2)
-axes[0].imshow(cow_img, interpolation='none')
-fig.show()
-
-
-
-
-
-
-
-
-
-
-def Mist(original_image, transparency):
-    '''Makes the image more transparent
+def paste_img2():
+    '''Pastes img2 onto top right of img1
     
     Take the second image that will be displayed on the first image
     and lowers the alpha channel or opaqueness.
     Will paste the image onto the First Image in a certain position.'''
-    #Open and show the new image in a new window
-    cow_img = PIL.Image.open(cow_file)
-    fig, ax = plt.subplots(1, 2)
-    ax[0].imshow(cow_img, interpolation='none')
     
-    
+    #Open the files in the same directory as the Python script
+    directory = os.path.dirname(os.path.abspath(__file__))
+    img2_file = os.path.join(directory, 'mrclean.png')
+
+    #Show the new image in a new window
+    img2_img = PIL.Image.open(img2_file)
+    fig, ax = plt.subplots(1, 1)
+    ax.imshow(img2_img, interpolation='none')
+    fig.show()
