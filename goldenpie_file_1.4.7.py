@@ -20,12 +20,13 @@ def alpha_down():
     # Create figure with 1 subplot
     fig, ax = plt.subplots(1, 1)
     # Show the image data in a subplot
-    ax.imshow(img, interpolation='none')
+   
     
     img = plt.imread(filename)
     
     height = len(img)
     width = len(img[0])
-    for r in range(155):
+    for r in range(height):
         for c in range(width):
-            img[r][c]=[0,0,0,100]
+            img[r][c]=[0,0,0]
+    ax.imshow(img, interpolation='none')
